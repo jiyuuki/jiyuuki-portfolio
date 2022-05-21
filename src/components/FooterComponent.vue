@@ -1,10 +1,10 @@
 <template>
-  <h1>Home</h1>
+  <h1>Footer</h1>
 </template>
 
 <script>
 export default {
-  name: 'HomeView',
+  name: 'FooterComponent',
   setup () {
     //
   }

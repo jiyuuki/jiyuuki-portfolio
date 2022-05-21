@@ -1,19 +1,39 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import DefaultLayout from '../views/layouts/DefaultLayout.vue'
 import HomeView from '../views/HomeView.vue'
+import WorksView from '../views/WorksView.vue'
+import NotesView from '../views/notes/NotesView.vue'
+import NoteDetailView from '../views/notes/NoteDetailView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    name: 'DefaultLayout',
+    component: DefaultLayout,
+    children: [
+      {
+        path: '/',
+        name: 'HomeView',
+        component: HomeView
+      },
+      {
+        path: 'works',
+        name: 'WorksView',
+        component: WorksView
+      },
+      {
+        path: 'notes',
+        name: 'NotesView',
+        component: NotesView,
+        children: [
+          {
+            path: 'note/:id', // BUG: can't read page content
+            name: 'NoteDetailView',
+            component: NoteDetailView
+          }
+        ]
+      }
+    ]
   }
 ]
 
