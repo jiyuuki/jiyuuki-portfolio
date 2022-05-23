@@ -1,5 +1,5 @@
 <template>
-  <h1>NavBar</h1>
+  <h1 class="text-red">NavBar</h1>
 </template>
 
 <script>
