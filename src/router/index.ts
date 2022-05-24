@@ -24,14 +24,13 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'notes',
         name: 'NotesView',
-        component: NotesView,
-        children: [
-          {
-            path: 'note/:id', // BUG: can't read page content
-            name: 'NoteDetailView',
-            component: NoteDetailView
-          }
-        ]
+        component: NotesView
+      },
+      {
+        path: '/notes/:id',
+        name: 'NoteDetailView',
+        component: NoteDetailView,
+        props: true
       }
     ]
   }
