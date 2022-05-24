@@ -5,10 +5,7 @@ function setColor (color) {
 }
 
 module.exports = {
-  content: [
-    './pages/**/*.{html,js}',
-    './components/**/*.{html,js}'
-  ],
+  content: ['./src/**/*.{html,js}'],
   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
