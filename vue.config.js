@@ -2,10 +2,13 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
-  ctest: /\.svg$/,
-  loader: 'vue-svg-sprite-loader',
-  options: {
-    // Removes svg title, default is false when not passing any options
-    removeTitle: true
+  chainWebpack: (config) => {
+    const svgRule = config.module.rule('svg')
+
+    svgRule.uses.clear()
+
+    svgRule
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
   }
 })

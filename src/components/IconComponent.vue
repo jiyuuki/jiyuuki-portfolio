@@ -44,7 +44,9 @@ export default {
   setup (props) {
     const icon = ref('')
     onMounted(() => {
-      import(`@/assets/icons/${props.iconName}.svg?sprite`).then((response) => {
+      console.log({ yohoo: `../assets/icons/${props.iconName}.svg?sprite` })
+      import(`../assets/icons/${props.iconName}.svg?sprite`).then((response) => {
+        console.log({ icon: response.default })
         icon.value = response.default
       }).catch((error) => {
         console.log({ error })
