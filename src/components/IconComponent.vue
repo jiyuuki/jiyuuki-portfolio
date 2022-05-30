@@ -12,7 +12,7 @@
   </svg>
 </template>
 
-<script>
+<script lang="ts">
 import { onMounted, ref } from 'vue'
 
 export default {
@@ -41,12 +41,11 @@ export default {
     }
   },
 
-  setup (props) {
+  setup (props : any) {
     const icon = ref('')
     onMounted(() => {
-      console.log({ yohoo: `../assets/icons/${props.iconName}.svg?sprite` })
       import(`../assets/icons/${props.iconName}.svg?sprite`).then((response) => {
-        console.log({ icon: response.default })
+        console.log({ icon: response })
         icon.value = response.default
       }).catch((error) => {
         console.log({ error })
