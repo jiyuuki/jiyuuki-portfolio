@@ -1,7 +1,6 @@
 module.exports = {
   lintOnSave: false,
   chainWebpack: (config) => {
-    console.log({ config })
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
     svgRule

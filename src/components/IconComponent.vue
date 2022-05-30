@@ -45,6 +45,7 @@ export default {
     const icon = ref('')
     onMounted(() => {
       import(`../assets/icons/${props.iconName}.svg?sprite`).then((response) => {
+        // BUG: fix load svg
         console.log({ icon: response })
         icon.value = response.default
       }).catch((error) => {
