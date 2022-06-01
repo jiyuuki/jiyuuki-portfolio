@@ -1,6 +1,4 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true,
+module.exports = {
   chainWebpack: (config) => {
     const svgRule = config.module.rule('svg')
 
@@ -10,4 +8,4 @@ module.exports = defineConfig({
       .use('svg-sprite-loader')
       .loader('svg-sprite-loader')
   }
-})
+}
