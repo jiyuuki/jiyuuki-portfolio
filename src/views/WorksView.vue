@@ -1,13 +1,14 @@
 <template>
-  <router-view/>
+  <h1>Works</h1>
 </template>
+
 <script>
 export default {
-  name: 'App',
-
+  name: 'WorksView',
   setup () {
     //
   }
 }
 </script>
-<style></style>
+
+<style scoped></style>

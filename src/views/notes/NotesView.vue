@@ -1,13 +1,15 @@
 <template>
-  <router-view/>
+  <h1>Notes</h1>
 </template>
+
 <script>
 export default {
-  name: 'App',
+  name: 'NotesView',
 
   setup () {
     //
   }
 }
 </script>
-<style></style>
+
+<style scoped></style>

@@ -1,14 +1,14 @@
 <template>
-  <h1 class="dark text-3xl underline text-secondaryContent">
-    Hello world!
-  </h1>
+  <h1>Home</h1>
 </template>
 
 <script>
-
 export default {
-  name: 'HomeView'
+  name: 'HomeView',
+  setup () {
+    //
+  }
 }
 </script>
 
-<style></style>
+<style scoped></style>
