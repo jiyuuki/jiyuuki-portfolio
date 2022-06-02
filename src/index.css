@@ -1,3 +1,113 @@
+/* ./src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  font-family: 'Source Code Pro', monospace;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+:root {
+  --darkForeground: #aaacae;
+  --darkBackground: #2a2f34;
+  --lightForeground: #000000;
+  --lightBackground: #ffffff;
+}
+
+.dark {
+  --color-primary-surface: #435a71;
+  --color-primary-content: #ffffff;
+
+  --color-secondary-surface: #1c2733;
+  --color-secondary-content: #42b883;
+
+  --color-variant-one: #42b883;
+  --color-variant-two: #0177bf;
+
+  --error: #cf6679;
+  --on-error: #32191e;
+
+  --color-foreground: #1c2733;
+  --color-background: #2a2f34;
+
+  --color-gray: rgba(255, 255, 255, 0.6);
+  --color-gray-border: rgb(69 68 68 / 60%);
+
+  --color-icon: #6e7681;
+
+  --color-input: rgba(255, 255, 255, 0.6);
+  --color-input-surface: #353b41;
+  --color-input-focus: #00b4a7;
+  --color-input-border: rgb(69 68 68 / 60%);
+
+  --color-button-surface: #353b41;
+  --color-button-content: rgba(255, 255, 255, 0.6);
+}
+
+.light {
+  --color-primary-surface: #ffffff;
+  --color-primary-content: #435a71;
+
+  --color-secondary-surface: #1c2733;
+  --color-secondary-content: #438078;
+
+  --color-variant-one: #42b883;
+  --color-variant-two: #0177bf;
+
+  --error: #b00020;
+  --on-error: #f0d7d9;
+
+  --color-foreground: #000000;
+  --color-background: #ffffff;
+
+  --color-gray: #6c6868;
+  --color-gray-border: #ececec;
+
+  --color-icon: #160041;
+
+  --color-input: #160041;
+  --color-input-surface: #fffbfe;
+  --color-input-focus: #160041a8;
+  --color-input-border: rgb(69 68 68 / 60%);
+
+  --color-button-surface: #160041;
+  --color-button-content: #fffbfe;
+
+}
+
+#app {
+  height: 100%;
+}
+
+.root {
+  background-color: var(--color-primary-surface)
+}
+
+.border-element {
+  border: 1px solid var(--color-gray-border)
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
