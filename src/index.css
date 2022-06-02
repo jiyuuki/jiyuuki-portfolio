@@ -24,13 +24,13 @@ a {
 }
 
 .dark {
-  --color-primary-surface: #435a71;
+  --color-primary-surface: #121c25;
   --color-primary-content: #ffffff;
 
   --color-secondary-surface: #1c2733;
-  --color-secondary-content: #42b883;
+  --color-secondary-content: #00b3a9;
 
-  --color-variant-one: #42b883;
+  --color-variant-one: #49c2bd;
   --color-variant-two: #0177bf;
 
   --error: #cf6679;
@@ -55,12 +55,12 @@ a {
 
 .light {
   --color-primary-surface: #ffffff;
-  --color-primary-content: #435a71;
+  --color-primary-content: #121c25;
 
   --color-secondary-surface: #1c2733;
-  --color-secondary-content: #438078;
+  --color-secondary-content: #00b4a8;
 
-  --color-variant-one: #42b883;
+  --color-variant-one: #49c2bd;
   --color-variant-two: #0177bf;
 
   --error: #b00020;

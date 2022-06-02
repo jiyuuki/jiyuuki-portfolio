@@ -31,7 +31,9 @@
                 class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline"
               >
                 <IconComponent
-                  :icon-name="`dark`"
+                  :icon-name="`sun`"
+                  :icon-width="`35`"
+                  :icon-height="`35`"
                 />
               </button>
             </li>
