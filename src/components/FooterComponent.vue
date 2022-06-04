@@ -1,5 +1,5 @@
 <template>
-  <h1>Footer</h1>
+  <h1>Salma EL HAJRAOUI</h1>
 </template>
 
 <script>
