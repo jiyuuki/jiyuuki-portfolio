@@ -13,12 +13,16 @@
         <div class="w-full flex-grow lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 md:bg-transparent z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3 contents">
-              <router-link :to="{ name: 'WorksView'}">
-                <span class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-lg font-medium">Works
+              <router-link
+                v-for="item in menuItems"
+                :key="item.id"
+                :to="{ name: item.name }"
+              >
+                <span
+                  class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-lg font-medium"
+                >
+                  {{ item.title }}
                 </span>
-              </router-link>
-              <router-link :to="{ name: 'NotesView'}">
-                <span class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-lg font-medium">Notes</span>
               </router-link>
               <a class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-secondaryContent" target="_blank" href="https://github.com/jiyuuki">
                 <IconComponent
@@ -54,10 +58,10 @@ export default {
   components: {
     IconComponent
   },
-
   setup () {
+    console.log({ menuItems })
     return {
-      menuItems
+      ...menuItems
     }
   }
 }
