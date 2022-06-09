@@ -27,8 +27,8 @@
               <a class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-secondaryContent" target="_blank" href="https://github.com/jiyuuki">
                 <IconComponent
                   :icon-name="`github`"
-                  :icon-width="`25`"
-                  :icon-height="`25`"
+                  :icon-width="`20`"
+                  :icon-height="`20`"
                 />
               </a>
               <button
