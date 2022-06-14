@@ -1,7 +1,7 @@
 <template>
   <div class="root dark">
     <NavBarComponent />
-    <div class="content">
+    <div class="content font-medium">
       <router-view />
     </div>
     <FooterComponent />
@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style scoped>
+
 .root {
   width: 100%;
   min-width: 0;
@@ -31,6 +32,7 @@ export default {
   min-height: 100%;
   position: relative;
   padding: 0px 30px 0px 30px;
+  color: var(--color-primary-content)
 }
 .content {
   padding-bottom: 20px;

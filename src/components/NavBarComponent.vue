@@ -2,7 +2,6 @@
   <div class="nav-bar">
     <nav class="w-full z-10 top-0">
       <div class="md:max-w-6xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
-
         <div class="pl-4">
           <router-link :to="{ name: 'HomeView'}">
             <span class="no-underline hover:no-underline text-xl font-medium">
