@@ -35,7 +35,7 @@
                 class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline"
               >
                 <IconComponent
-                  :icon-name="`sun`"
+                  :icon-name="`me`"
                   :icon-width="`35`"
                   :icon-height="`35`"
                 />
@@ -59,7 +59,6 @@ export default {
     IconComponent
   },
   setup () {
-    console.log({ menuItems })
     return {
       ...menuItems
     }
