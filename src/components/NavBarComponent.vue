@@ -10,35 +10,25 @@
             </span>
           </router-link>
         </div>
-        <div class="w-full flex-grow lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 md:bg-transparent z-20" id="nav-content">
+        <div class="w-full flex-grow lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 md:bg-transparent z-20"
+          id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            <li class="mr-3 contents">
-              <router-link
-                v-for="item in menuItems"
-                :key="item.id"
-                :to="{ name: item.name }"
-              >
-                <span
-                  class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-lg font-medium"
-                >
+            <li v-for="item in menuItems" :key="item.id" class="mr-3 contents">
+              <router-link :to="{ name: item.name }">
+                <span class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-lg font-medium">
                   {{ item.title }}
                 </span>
               </router-link>
-              <a class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-secondaryContent" target="_blank" href="https://github.com/jiyuuki">
-                <IconComponent
-                  :icon-name="`github`"
-                  :icon-width="`20`"
-                  :icon-height="`20`"
-                />
+            </li>
+            <li class="mr-3 contents">
+              <a class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-secondaryContent"
+                target="_blank" href="https://github.com/jiyuuki">
+                <IconComponent :icon-name="`github`" :icon-width="`20`" :icon-height="`20`" />
               </a>
-              <button
-                class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline"
-              >
-                <IconComponent
-                  :icon-name="`me`"
-                  :icon-width="`35`"
-                  :icon-height="`35`"
-                />
+            </li>
+            <li class="mr-3 contents">
+              <button class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline">
+                <IconComponent :icon-name="`light`" :icon-width="`20`" :icon-height="`20`" />
               </button>
             </li>
           </ul>
