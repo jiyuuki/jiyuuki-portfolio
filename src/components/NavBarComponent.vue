@@ -26,8 +26,13 @@
               </a>
             </li>
             <li class="mr-3 contents">
-              <button class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline">
-                <IconComponent :icon-name="`light`" :icon-width="`20`" :icon-height="`20`" />
+              <button @click="changeTheme" class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline">
+                <IconComponent
+                  :key="count"
+                  :icon-name="icon"
+                  :icon-width="`20`"
+                  :icon-height="`20`"
+                />
               </button>
             </li>
           </ul>
@@ -40,6 +45,8 @@
 <script>
 import menuItems from '@/data/menuItems.js'
 import IconComponent from './IconComponent.vue'
+import useMainStore from '@/stores/mainStore'
+import { ref } from 'vue'
 
 export default {
   name: 'NavBar',
@@ -48,8 +55,28 @@ export default {
     IconComponent
   },
   setup () {
+    const mainStore = useMainStore()
+    const count = ref(0)
+
+    const icon = ref(localStorage.getItem('theme'))
+
+    const changeTheme = () => {
+      mainStore.$patch((state) => {
+        state.theme = state.theme === 'light' ? 'dark' : 'light'
+
+        icon.value = state.theme
+        count.value++
+
+        localStorage.setItem('theme', state.theme)
+      })
+    }
+
     return {
-      ...menuItems
+      ...menuItems,
+      changeTheme,
+      mainStore,
+      icon,
+      count
     }
   }
 }

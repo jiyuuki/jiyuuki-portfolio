@@ -1,5 +1,5 @@
 <template>
-  <div class="root dark">
+  <div class="root" :class="mainStore.theme">
     <NavBarComponent />
     <div class="content font-medium">
       <router-view />
@@ -9,8 +9,10 @@
 </template>
 
 <script>
-import NavBarComponent from '../../components/NavBarComponent.vue'
-import FooterComponent from '../../components/FooterComponent.vue'
+import NavBarComponent from '@/components/NavBarComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+import useMainStore from '@/stores/mainStore'
+
 export default {
   name: 'DefaultLayout',
   components: {
@@ -18,7 +20,11 @@ export default {
     FooterComponent
   },
   setup () {
-    //
+    const mainStore = useMainStore()
+    console.log({ mainStore: mainStore.theme })
+    return {
+      mainStore
+    }
   }
 }
 </script>
