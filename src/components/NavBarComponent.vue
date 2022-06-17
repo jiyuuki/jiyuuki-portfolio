@@ -14,7 +14,7 @@
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li v-for="item in menuItems" :key="item.id" class="mr-3 contents">
               <router-link :to="{ name: item.name }">
-                <span class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-lg font-medium">
+                <span class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-xl font-medium">
                   {{ item.title }}
                 </span>
               </router-link>
@@ -22,7 +22,11 @@
             <li class="mr-3 contents">
               <a class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-secondaryContent"
                 target="_blank" href="https://github.com/jiyuuki">
-                <IconComponent :icon-name="`github`" :icon-width="`20`" :icon-height="`20`" />
+                <IconComponent
+                  :icon-name="`github`"
+                  :icon-width="`25`"
+                  :icon-height="`25`"
+                />
               </a>
             </li>
             <li class="mr-3 contents">
@@ -30,8 +34,8 @@
                 <IconComponent
                   :key="count"
                   :icon-name="icon"
-                  :icon-width="`20`"
-                  :icon-height="`20`"
+                  :icon-width="`25`"
+                  :icon-height="`25`"
                 />
               </button>
             </li>
