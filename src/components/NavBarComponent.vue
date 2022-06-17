@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import menuItems from '@/data/menuItems.js'
+import menuItems from '@/data/menuItemsData.js'
 import IconComponent from './IconComponent.vue'
 import useMainStore from '@/stores/mainStore'
 import { ref } from 'vue'
