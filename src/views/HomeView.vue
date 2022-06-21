@@ -19,10 +19,12 @@
     aliquip sit. Commodo ipsum nisi deserunt adipisicing sit mollit dolor eu irure sunt est officia labore.
   </p>
   <p class="py-6 text-primaryContent">
-    <span class="text-variantOne">YStack technique i use : </span>
-    <span> Vuejs</span>
+    <span class="text-variantOne">STACK I USE : </span>
     <span> Javascript</span>
+    <span> Vuejs</span>
+    <span> Pinia</span>
     <span> Nuxtjs</span>
+    <span> Reactjs</span>
     <span> Nodejs</span>
   </p>
   <div class="grid grid-cols-4 gap-3">
@@ -39,7 +41,9 @@
     </div>
     <div>
       <span class="qr-code">
-        <QrCodeComponentVue />
+        <QrCodeComponentVue
+          :theme="mainStore.theme"
+        />
       </span>
     </div>
   </div>
@@ -47,14 +51,18 @@
 
 <script>
 import QrCodeComponentVue from '@/components/QrCodeComponent.vue'
-
+import useMainStore from '@/stores/mainStore'
 export default {
   name: 'HomeView',
   components: {
     QrCodeComponentVue
   },
   setup () {
-    //
+    const mainStore = useMainStore()
+
+    return {
+      mainStore
+    }
   }
 }
 </script>

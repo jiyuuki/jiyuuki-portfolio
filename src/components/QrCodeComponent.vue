@@ -1,24 +1,32 @@
 <template>
-  <qrcode-vue :value="getQrCodeTheme().value" :size="getQrCodeTheme().size" :level="getQrCodeTheme().level"
-    :foreground="getQrCodeTheme().foreground" :background="getQrCodeTheme().background" />
+  <qrcode-vue
+    :value="getQrCodeTheme().value"
+    :size="getQrCodeTheme().size"
+    :level="getQrCodeTheme().level"
+    :foreground="getQrCodeTheme().foreground"
+    :background="getQrCodeTheme().background"
+  />
 </template>
 
 <script>
 import QrcodeVue from 'qrcode.vue'
-import { computed } from 'vue'
-import { useStore } from 'vuex'
+
 export default {
   name: 'QrCode',
   components: {
     QrcodeVue
   },
-  setup () {
+  props: {
+    theme: {
+      type: String,
+      require: true
+    }
+  },
+  setup (props) {
     // TODO: set mode in props
-    const store = useStore()
     const getQrCodeTheme = () => {
-      const mode = computed(() => store.getters['getMode'])
-      const foreground = mode.value === 'dark' ? '--darkForeground' : '--lightForeground'
-      const background = mode.value === 'dark' ? '--darkBackground' : '--lightBackground'
+      const foreground = props.theme === 'dark' ? '--darkForeground' : '--lightForeground'
+      const background = props.theme === 'dark' ? '--darkBackground' : '--lightBackground'
       return {
         foreground: getComputedStyle(document.documentElement).getPropertyValue(foreground),
         background: getComputedStyle(document.documentElement).getPropertyValue(background),
