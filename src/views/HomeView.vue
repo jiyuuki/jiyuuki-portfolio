@@ -6,20 +6,20 @@
       I'm <span class="text-secondaryContent">SALMA EL HAJRAOUI</span>
     </h1>
     <p class="pb-6 text-sm md:text-base text-gray-600 text-primaryContent">
-      <span class="break-normal text-gray-900 text-2xl">Front-end Developer</span>
+      <span class="break-normal text-2xl">Front-end Developer</span>
     </p>
-    <p class="py-6 text-primaryContent">
+    <p class="py-6 text-primaryContent break-normal text-lg">
       Hallo to lorem Pariatur <span class="text-secondaryContent no-underline hover:underline" href="#">proident
         occaecat</span> proident occaecat consectetur eu ipsum duis deserunt esse aliqua veniam do officia enim
       deserunt.
     </p>
   </div>
-  <p class="py-6 text-primaryContent">
+  <p class="py-6 text-primaryContent break-normal text-lg">
     Sills tempor qui labore minim velit exercitation incididunt occaecat dolore. Veniam tempor do deserunt voluptate
     aliquip sit. Commodo ipsum nisi deserunt adipisicing sit mollit dolor eu irure sunt est officia labore.
   </p>
-  <p class="py-6 text-primaryContent">
-    <span class="text-variantOne">STACK I USE : </span>
+  <p class="py-6 text-primaryContent break-normal text-lg">
+    <span class="text-variantOne">Stack i use : </span>
     <span> Javascript</span>
     <span> Vuejs</span>
     <span> Pinia</span>
@@ -28,9 +28,9 @@
     <span> Nodejs</span>
   </p>
   <div class="grid grid-cols-4 gap-3">
-    <div class="col-span-3 social-media">
+    <div class="col-span-3 social-media break-normal text-lg">
       <blockquote class="border-l-4 border-secondaryContent italic my-8 pl-8 md:pl-12 text-primaryContent">
-        ou can Say Hi on
+        You can say Hi on
         <a class="text-secondaryContent font-bold no-underline hover:underline" target="_blank"
           href="https://twitter.com/SalmaElHajraoui">Twitter</a>
         or
@@ -41,9 +41,7 @@
     </div>
     <div>
       <span class="qr-code">
-        <QrCodeComponentVue
-          :theme="mainStore.theme"
-        />
+        <QrCodeComponentVue :theme="mainStore.theme" />
       </span>
     </div>
   </div>

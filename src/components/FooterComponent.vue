@@ -8,7 +8,7 @@
         :stroke="`text-secondaryContent`"
       />
     </div>
-    <div class="pl-2">
+    <div class="pl-2 text-sm">
       {{ currentDate.getFullYear() }} © Salma EL HAJRAOUI
     </div>
   </div>
