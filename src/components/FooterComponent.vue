@@ -1,5 +1,5 @@
 <template>
-  <div class="footer flex items-center m-5">
+  <div class="footer flex items-center m-5 pt-28">
     <div class="pl-2">
       <IconComponent
         :icon-name="`me`"
