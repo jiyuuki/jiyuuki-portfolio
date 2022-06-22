@@ -40,7 +40,7 @@ a {
   --color-background: #2a2f34;
 
   --color-gray: rgba(255, 255, 255, 0.6);
-  --color-gray-border: rgb(69 68 68 / 60%);
+  --color-gray-border: rgb(84 90 102 / 61%);
 
   --color-icon: #6e7681;
 
@@ -70,9 +70,9 @@ a {
   --color-background: #ffffff;
 
   --color-gray: #6c6868;
-  --color-gray-border: #ececec;
+  --color-gray-border: #cccdd3ed;
 
-  --color-icon: #160041;
+  --color-icon: #151513;
 
   --color-input: #160041;
   --color-input-surface: #fffbfe;
