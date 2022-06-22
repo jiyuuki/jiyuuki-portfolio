@@ -23,7 +23,6 @@ export default {
     }
   },
   setup (props) {
-    // TODO: set mode in props
     const getQrCodeTheme = () => {
       const foreground = props.theme === 'dark' ? '--darkForeground' : '--lightForeground'
       const background = props.theme === 'dark' ? '--darkBackground' : '--lightBackground'

@@ -6,11 +6,16 @@
       I'm <span class="text-secondaryContent">SALMA EL HAJRAOUI</span>
     </h1>
     <p class="pb-6 text-sm md:text-base text-gray-600 text-primaryContent">
-      <span class="break-normal text-2xl">Front-end Developer</span>
+      <span class="break-normal text-2xl">
+        Front-end Developer
+      </span>
     </p>
     <p class="py-6 text-primaryContent break-normal text-lg">
-      Hallo to lorem Pariatur <span class="text-secondaryContent no-underline hover:underline" href="#">proident
-        occaecat</span> proident occaecat consectetur eu ipsum duis deserunt esse aliqua veniam do officia enim
+      Hallo to lorem Pariatur
+      <span class="text-secondaryContent no-underline hover:underline">
+        proident occaecat
+      </span>
+      proident occaecat consectetur eu ipsum duis deserunt esse aliqua veniam do officia enim
       deserunt.
     </p>
   </div>
@@ -41,7 +46,9 @@
     </div>
     <div>
       <span class="qr-code">
-        <QrCodeComponentVue :theme="mainStore.theme" />
+        <QrCodeComponentVue
+          :theme="mainStore.theme"
+        />
       </span>
     </div>
   </div>

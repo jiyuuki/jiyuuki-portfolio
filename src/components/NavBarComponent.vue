@@ -3,7 +3,9 @@
     <nav class="w-full z-10 top-0">
       <div class="md:max-w-6xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
         <div class="pl-4">
-          <router-link :to="{ name: 'HomeView'}">
+          <router-link
+            :to="{ name: 'HomeView'}"
+          >
             <span class="no-underline hover:no-underline text-xl font-medium">
               Jiyuuki
             </span>
@@ -12,8 +14,14 @@
         <div class="w-full flex-grow lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 md:bg-transparent z-20"
           id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            <li v-for="item in menuItems" :key="item.id" class="mr-3 contents">
-              <router-link :to="{ name: item.name }">
+            <li
+              v-for="(item, index) in menuItems"
+              :key="index"
+              class="mr-3 contents"
+            >
+              <router-link
+                :to="{ name: item.name }"
+              >
                 <span class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-xl font-medium">
                   {{ item.title }}
                 </span>
@@ -30,7 +38,10 @@
               </a>
             </li>
             <li class="mr-3 contents">
-              <button @click="changeTheme" class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline">
+              <button
+                @click="changeTheme"
+                class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline"
+              >
                 <IconComponent
                   :key="count"
                   :icon-name="icon"
@@ -91,9 +102,7 @@ export default {
   width: 100%;
   color: var(--color-primary-content);
 }
-
 .nav-bar a.router-link-exact-active {
   color: var(--color-secondary-content);
 }
-
 </style>
