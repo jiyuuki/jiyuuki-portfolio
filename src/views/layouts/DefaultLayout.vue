@@ -1,10 +1,10 @@
 <template>
-  <div class="root" :class="mainStore.theme">
+  <div class="root flex flex-col" :class="mainStore.theme">
     <NavBarComponent />
-    <div class="content font-medium">
+    <div class="content">
       <router-view />
+      <FooterComponent />
     </div>
-    <FooterComponent />
   </div>
 </template>
 
@@ -36,7 +36,6 @@ export default {
   min-width: 0;
   margin: 0 auto;
   min-height: 100%;
-  position: relative;
   padding: 0px 30px 0px 30px;
   color: var(--color-primary-content)
 }
