@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid'
 
 export default {
-  pageTitle: 'Works',
+  pageTitle: 'See All my Works on',
   works: [
     {
       id: uuidv4(),

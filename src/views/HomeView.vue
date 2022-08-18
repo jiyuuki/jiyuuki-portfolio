@@ -20,17 +20,17 @@
     </p>
   </div>
   <p class="py-6 text-primaryContent break-normal text-lg">
-    Sills tempor qui labore minim velit exercitation incididunt occaecat dolore. Veniam tempor do deserunt voluptate
-    aliquip sit. Commodo ipsum nisi deserunt adipisicing sit mollit dolor eu irure sunt est officia labore.
+    {{ aboutMe }}
   </p>
   <p class="py-6 text-primaryContent break-normal text-lg">
     <span class="text-variantOne">Stack i use : </span>
-    <span> Javascript</span>
-    <span> Vuejs</span>
-    <span> Pinia</span>
-    <span> Nuxtjs</span>
-    <span> Reactjs</span>
-    <span> Nodejs</span>
+    <span
+      v-for="(value, index) in stack"
+      :key="index"
+      class="mr-3"
+    >
+      {{ value.tag }}
+    </span>
   </p>
   <div class="grid grid-cols-4 gap-3">
     <div class="col-span-3 social-media break-normal text-lg">
@@ -46,9 +46,7 @@
     </div>
     <div>
       <span class="qr-code">
-        <QrCodeComponentVue
-          :theme="mainStore.theme"
-        />
+        <QrCodeComponentVue :theme="theme" />
       </span>
     </div>
   </div>
@@ -64,9 +62,14 @@ export default {
   },
   setup () {
     const mainStore = useMainStore()
+    const aboutMe = mainStore.aboutMe
+    const stack = mainStore.stack
+    const theme = mainStore.theme
 
     return {
-      mainStore
+      aboutMe,
+      stack,
+      theme
     }
   }
 }

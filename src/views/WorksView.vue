@@ -1,7 +1,7 @@
 <template>
   <div class="pt-10 text-2xl">
     <span>
-      See All my Works on
+      {{ pageTitle }}
       <a class="text-secondaryContent font-bold" href="https://github.com/jiyuuki" target="_blank">
         Github
       </a>

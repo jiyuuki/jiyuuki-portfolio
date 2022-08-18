@@ -1,42 +1,22 @@
 <template>
   <div class="pt-10 text-2xl">
     <p class="text-secondaryContent">
-      My learning journey in notes
+      {{ pageTitle }}
     </p>
     <p class="text-colorGray text-lg">
-      Only the mediocre are always at their best - Jean Giraudoux
+      {{ quotes }}
     </p>
   </div>
   <div class="mx-auto">
-    <div class="mt-20">
+    <div class="mt-20" v-for="(note, index) in notes" :key="index">
       <span class="text-secondaryContent text-2xl">
-        Qui qui exercitation fugiat dolore nisi enim voluptate
+        {{ note.title }}
       </span>
       <p class="text-colorGray text-base">
-        Published on Marsh 2th 2022
+        Published on {{ note.published }}
       </p>
       <p class="py-6 text-lg font-medium">
-        Qui qui exercitation fugiat dolore nisi enim voluptate sint elit qui sit. Excepteur aliquip elit laboris culpa
-        voluptate velit Lorem aute laborum ad voluptate. Officia occaecat sunt qui commodo proident mollit ad enim enim
-        esse eu. Laboris officia ut anim amet tempor minim deserunt aliqua.Id deserunt consequat veniam commodo tempor
-        consectetur velit reprehenderit Lorem.
-      </p>
-      <span class="text-secondaryContent py-2 rounded-full font-medium">
-        Read More
-      </span>
-    </div>
-    <div class="mt-20">
-      <span class="text-secondaryContent text-2xl">
-        Qui qui exercitation fugiat dolore nisi enim voluptate
-      </span>
-      <p class="text-colorGray text-base">
-        Published on Marsh 2th 2022
-      </p>
-      <p class="py-6 text-lg font-medium">
-        Qui qui exercitation fugiat dolore nisi enim voluptate sint elit qui sit. Excepteur aliquip elit laboris culpa
-        voluptate velit Lorem aute laborum ad voluptate. Officia occaecat sunt qui commodo proident mollit ad enim enim
-        esse eu. Laboris officia ut anim amet tempor minim deserunt aliqua.Id deserunt consequat veniam commodo tempor
-        consectetur velit reprehenderit Lorem.
+        {{ note.description }}
       </p>
       <span class="text-secondaryContent py-2 rounded-full font-medium">
         Read More
@@ -46,8 +26,29 @@
 </template>
 
 <script>
+import useNoteStore from '@/stores/noteStore'
+import { onMounted, ref } from 'vue'
+
 export default {
-  name: 'NotesView'
+  name: 'NotesView',
+
+  setup () {
+    const store = useNoteStore()
+    const pageTitle = store.pageTitle
+    const quotes = store.quotes
+    const notes = ref([])
+
+    onMounted(() => {
+      notes.value = store.getNotes()
+      console.log({ notes })
+    })
+
+    return {
+      pageTitle,
+      quotes,
+      notes
+    }
+  }
 }
 </script>
 
