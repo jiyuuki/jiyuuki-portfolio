@@ -131,7 +131,7 @@ export default {
     },
     {
       id: uuidv4(),
-      name: 'React js monsters rolodex',
+      name: 'Monsters rolodex',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       icon: 'space',
       tags: [

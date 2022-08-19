@@ -38,6 +38,13 @@ export default {
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quos voluptas perferendis, alias enim id quas omnis aut dolorem, doloremque cumque? Eum quae cupiditate eius sit...',
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quos voluptas perferendis, alias enim id quas omnis aut dolorem, doloremque cumque? Eum quae cupiditate eius sit, ullam cum fugit beatae?',
       published: 'Marsh 2th 2022'
+    },
+    {
+      id: uuidv4(),
+      title: 'Nostrum quos voluptas perferendis',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quos voluptas perferendis, alias enim id quas omnis aut dolorem, doloremque cumque? Eum quae cupiditate eius sit...',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quos voluptas perferendis, alias enim id quas omnis aut dolorem, doloremque cumque? Eum quae cupiditate eius sit, ullam cum fugit beatae?',
+      published: 'Marsh 2th 2022'
     }
   ]
 }
