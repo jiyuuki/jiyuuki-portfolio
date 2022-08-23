@@ -19,19 +19,25 @@
       deserunt.
     </p>
   </div>
-  <p class="py-6 text-primaryContent break-normal text-lg">
+  <div class="py-6 text-primaryContent break-normal text-lg">
     {{ aboutMe }}
-  </p>
-  <p class="py-6 text-primaryContent break-normal text-lg">
-    <span class="text-variantOne">Stack i use : </span>
-    <span
-      v-for="(value, index) in stack"
-      :key="index"
-      class="mr-3"
-    >
-      {{ value.tag }}
+  </div>
+  <div class="py-6 text-primaryContent break-normal text-lg">
+    <span class="text-secondaryContent break-normal text-xl">
+      Stack i use :
     </span>
-  </p>
+    <div class="grid gap-x-8 gap-y-4 grid-cols-2 mt-6">
+      <div class="flex items-center" v-for="(value, index) in stack" :key="index">
+        <span class=" mr-3">
+          <IconComponent :icon-name="`check`" :icon-width="`15`" :icon-height="`15`" :stroke="`#e19ce7`"
+            :fill="`#e19ce7`" />
+        </span>
+        <span>
+          {{ value.tag }}
+        </span>
+      </div>
+    </div>
+  </div>
   <div class="grid grid-cols-4 gap-3">
     <div class="col-span-3 social-media break-normal text-lg">
       <blockquote class="border-l-4 border-secondaryContent italic my-8 pl-8 md:pl-12 text-primaryContent">
@@ -53,12 +59,14 @@
 </template>
 
 <script>
+import IconComponent from '@/components/IconComponent.vue'
 import QrCodeComponentVue from '@/components/QrCodeComponent.vue'
 import useMainStore from '@/stores/mainStore'
 export default {
   name: 'HomeView',
   components: {
-    QrCodeComponentVue
+    QrCodeComponentVue,
+    IconComponent
   },
   setup () {
     const mainStore = useMainStore()

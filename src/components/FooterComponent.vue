@@ -3,7 +3,7 @@
     <div class="w-full z-10 top-0">
       <div class="max-w-2xl flex flex-wrap items-center justify-start mt-0">
         <div class="pr-2">
-          <IconComponent :icon-name="`me`" :icon-width="`20`" :icon-height="`20`" :stroke="`text-secondaryContent`" />
+          <IconComponent :icon-name="`light`" :icon-width="`20`" :icon-height="`20`" :stroke="`text-secondaryContent`" />
         </div>
         <div class="text-sm">
           {{ currentDate.getFullYear() }} © Salma EL HAJRAOUI

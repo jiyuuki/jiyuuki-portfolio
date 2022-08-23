@@ -1,56 +1,46 @@
 <template>
   <div class="nav-bar">
-    <nav class="w-full z-10 top-0">
-      <div class="md:max-w-6xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
-        <div class="pl-4">
-          <router-link
-            :to="{ name: 'HomeView'}"
-          >
-            <span class="no-underline hover:no-underline text-xl font-medium">
-              Jiyuuki
-            </span>
-          </router-link>
+    <nav class="">
+      <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+        <div class="flex items-center justify-between">
+          <div>
+            <router-link :to="{ name: 'HomeView'}">
+              <span class="no-underline hover:no-underline text-xl">
+                Jiyuuki
+              </span>
+            </router-link>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="flex md:hidden">
+            <button type="button"
+              class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+              aria-label="toggle menu">
+              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                <path fill-rule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                </path>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="w-full flex-grow lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 md:bg-transparent z-20"
-          id="nav-content">
-          <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            <li
-              v-for="(item, index) in menuItems"
-              :key="index"
-              class="mr-3 contents"
-            >
-              <router-link
-                :to="{ name: item.name }"
-              >
-                <span class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-xl font-medium">
-                  {{ item.title }}
-                </span>
-              </router-link>
-            </li>
-            <li class="mr-3 contents">
-              <a class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline text-secondaryContent"
-                target="_blank" href="https://github.com/jiyuuki">
-                <IconComponent
-                  :icon-name="`github`"
-                  :icon-width="`25`"
-                  :icon-height="`25`"
-                />
-              </a>
-            </li>
-            <li class="mr-3 contents">
-              <button
-                @click="changeTheme"
-                class="inline-block py-2 px-4 hover:text-gray-900 hover:text-underline"
-              >
-                <IconComponent
-                  :key="count"
-                  :icon-name="icon"
-                  :icon-width="`25`"
-                  :icon-height="`25`"
-                />
-              </button>
-            </li>
-          </ul>
+
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <div class="items-center md:flex">
+          <div class="flex flex-col md:flex-row md:mx-6 items-center">
+            <router-link v-for="(item, index) in menuItems" :key="index" :to="{ name: item.name }">
+              <span class="my-1 text-sm font-medium md:mx-4 md:my-0">
+                {{ item.title }}
+              </span>
+            </router-link>
+            <a class="text-secondaryContent my-1 text-sm font-medium md:mx-4 md:my-0" target="_blank"
+              href="https://github.com/jiyuuki">
+              <IconComponent :icon-name="`github`" :icon-width="`19`" :icon-height="`19`" />
+            </a>
+            <button class="text-secondaryContent my-1 text-sm font-medium md:mx-4 md:my-0"  @click="changeTheme">
+              <IconComponent :key="count" :icon-name="icon" :icon-width="`19`" :icon-height="`19`" :fill="`stroke`" />
+            </button>
+          </div>
         </div>
       </div>
     </nav>
@@ -73,13 +63,13 @@ export default {
     const mainStore = useMainStore()
     const count = ref(0)
 
-    const icon = ref(localStorage.getItem('theme'))
+    const icon = ref(localStorage.getItem('theme') === 'light' ? 'dark' : 'light')
 
     const changeTheme = () => {
       mainStore.$patch((state) => {
         state.theme = state.theme === 'light' ? 'dark' : 'light'
 
-        icon.value = state.theme
+        icon.value = state.theme === 'light' ? 'dark' : 'light'
         count.value++
 
         localStorage.setItem('theme', state.theme)
@@ -102,7 +92,11 @@ export default {
   width: 100%;
   color: var(--color-primary-content);
 }
+.nav-bar span:hover {
+  color: var(--color-secondary-content);
+}
 .nav-bar a.router-link-exact-active {
   color: var(--color-secondary-content);
+  /* text-decoration: underline; */
 }
 </style>

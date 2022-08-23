@@ -40,7 +40,6 @@ export default {
 
     onMounted(() => {
       notes.value = store.getNotes()
-      console.log({ notes })
     })
 
     return {

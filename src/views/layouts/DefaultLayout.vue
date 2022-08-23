@@ -21,7 +21,6 @@ export default {
   },
   setup () {
     const mainStore = useMainStore()
-    console.log({ mainStore: mainStore.theme })
     return {
       mainStore
     }
