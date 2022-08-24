@@ -47,12 +47,15 @@
         or
         <a class="text-secondaryContent font-bold no-underline hover:underline" target="_blank"
           href="https://www.linkedin.com/in/elhajraoui">Linkdin</a>
-        or scan this QR code to download my resume
+        or scan this QR code to download my resume {{ theme }}
       </blockquote>
     </div>
     <div>
       <span class="qr-code">
-        <QrCodeComponentVue :theme="theme" />
+        <QrCodeComponentVue
+          :key="theme"
+          :theme="theme"
+        />
       </span>
     </div>
   </div>
@@ -62,6 +65,7 @@
 import IconComponent from '@/components/IconComponent.vue'
 import QrCodeComponentVue from '@/components/QrCodeComponent.vue'
 import useMainStore from '@/stores/mainStore'
+import { computed } from '@vue/runtime-core'
 export default {
   name: 'HomeView',
   components: {
@@ -72,7 +76,10 @@ export default {
     const mainStore = useMainStore()
     const aboutMe = mainStore.aboutMe
     const stack = mainStore.stack
-    const theme = mainStore.theme
+
+    const theme = computed(() => {
+      return mainStore.theme
+    })
 
     return {
       aboutMe,

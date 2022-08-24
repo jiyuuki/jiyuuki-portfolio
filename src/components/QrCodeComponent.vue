@@ -1,15 +1,16 @@
 <template>
   <qrcode-vue
-    :value="getQrCodeTheme().value"
-    :size="getQrCodeTheme().size"
-    :level="getQrCodeTheme().level"
-    :foreground="getQrCodeTheme().foreground"
-    :background="getQrCodeTheme().background"
+    :value="value"
+    :size="size"
+    :level="level"
+    :foreground="foreground"
+    :background="background"
   />
 </template>
 
 <script>
 import QrcodeVue from 'qrcode.vue'
+import { ref, onMounted } from 'vue'
 
 export default {
   name: 'QrCode',
@@ -23,19 +24,28 @@ export default {
     }
   },
   setup (props) {
-    const getQrCodeTheme = () => {
-      const foreground = props.theme === 'dark' ? '--darkForeground' : '--lightForeground'
-      const background = props.theme === 'dark' ? '--darkBackground' : '--lightBackground'
-      return {
-        foreground: getComputedStyle(document.documentElement).getPropertyValue(foreground),
-        background: getComputedStyle(document.documentElement).getPropertyValue(background),
-        size: 100,
-        level: 'H',
-        value: 'https://docs.google.com/document/d/1jmXAejt9H304VGs0UFtfGW3i1y4_Qtz6/edit?usp=sharing&ouid=101840272969327448219&rtpof=true&sd=true'
-      }
+    const foreground = ref()
+    const background = ref()
+    const size = ref(100)
+    const level = ref('H')
+    const value = ref('https://docs.google.com/document/d/1jmXAejt9H304VGs0UFtfGW3i1y4_Qtz6/edit?usp=sharing&ouid=101840272969327448219&rtpof=true&sd=true')
+
+    const QrCodeTheme = {
+      fore: props.theme === 'dark' ? '--darkForeground' : '--lightForeground',
+      back: props.theme === 'dark' ? '--darkBackground' : '--lightBackground'
     }
+
+    onMounted(() => {
+      foreground.value = getComputedStyle(document.documentElement).getPropertyValue(QrCodeTheme.fore)
+      background.value = getComputedStyle(document.documentElement).getPropertyValue(QrCodeTheme.back)
+    })
+
     return {
-      getQrCodeTheme
+      foreground,
+      background,
+      size,
+      level,
+      value
     }
   }
 }
