@@ -47,7 +47,7 @@
         or
         <a class="text-secondaryContent font-bold no-underline hover:underline" target="_blank"
           href="https://www.linkedin.com/in/elhajraoui">Linkdin</a>
-        or scan this QR code to download my resume {{ theme }}
+        or scan this QR code to download my resume
       </blockquote>
     </div>
     <div>
