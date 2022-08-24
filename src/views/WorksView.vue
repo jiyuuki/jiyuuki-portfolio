@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-10 text-xl">
+  <div class="pt-10 text-2xl">
     <span>
       {{ pageTitle }}
       <a class="text-secondaryContent font-bold" href="https://github.com/jiyuuki" target="_blank">

@@ -5,7 +5,7 @@
         <div class="flex items-center justify-between">
           <div>
             <router-link :to="{ name: 'HomeView'}">
-              <span class="no-underline hover:no-underline text-2xl">
+              <span class="no-underline hover:no-underline font-medium text-lg">
                 Jiyuuki
               </span>
             </router-link>
