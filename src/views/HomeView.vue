@@ -26,7 +26,7 @@
     <span class="text-secondaryContent break-normal text-xl font-bold">
       Stack i use :
     </span>
-    <div class="pt-6 grid gap-x-8 gap-y-4 grid-cols-3">
+    <div class="pt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
       <div class="flex items-center" v-for="(value, index) in stack" :key="index">
         <span class=" mr-3">
           <IconComponent :icon-name="`check`" :icon-width="`15`" :icon-height="`15`" :stroke="`#e19ce7`"
@@ -38,7 +38,7 @@
       </div>
     </div>
   </div>
-  <div class="pt-6 grid grid-cols-3 gap-4">
+  <div class="pt-6 grid grid-cols-3 gap-4 items-center">
     <div class="col-span-2 social-media break-normal text-lg">
       <blockquote class="border-l-4 border-secondaryContent italic my-8 pl-8 md:pl-12 text-primaryContent">
         You can say Hi on
@@ -66,6 +66,7 @@ import IconComponent from '@/components/IconComponent.vue'
 import QrCodeComponentVue from '@/components/QrCodeComponent.vue'
 import useMainStore from '@/stores/mainStore'
 import { computed } from '@vue/runtime-core'
+
 export default {
   name: 'HomeView',
   components: {

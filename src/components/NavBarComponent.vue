@@ -38,7 +38,7 @@
               <IconComponent :icon-name="`github`" :icon-width="`21`" :icon-height="`21`" />
             </a>
             <button class="text-secondaryContent my-1 text-lg font-medium md:mx-4 md:my-0"  @click="changeTheme">
-              <IconComponent :key="count" :icon-name="icon" :icon-width="`21`" :icon-height="`21`" :fill="`stroke`" />
+              <IconComponent :key="icon" :icon-name="icon" :icon-width="`21`" :icon-height="`21`" :fill="`stroke`" />
             </button>
           </div>
         </div>
@@ -61,17 +61,13 @@ export default {
   },
   setup () {
     const mainStore = useMainStore()
-    const count = ref(0)
 
     const icon = ref(localStorage.getItem('theme') === 'light' ? 'dark' : 'light')
 
     const changeTheme = () => {
       mainStore.$patch((state) => {
         state.theme = state.theme === 'light' ? 'dark' : 'light'
-
         icon.value = state.theme === 'light' ? 'dark' : 'light'
-        count.value++
-
         localStorage.setItem('theme', state.theme)
       })
     }
@@ -80,8 +76,7 @@ export default {
       ...menuItems,
       changeTheme,
       mainStore,
-      icon,
-      count
+      icon
     }
   }
 }
