@@ -23,10 +23,10 @@
     {{ aboutMe }}
   </div>
   <div class="py-6 text-primaryContent break-normal text-lg">
-    <span class="text-secondaryContent break-normal text-xl">
+    <span class="text-secondaryContent break-normal text-xl font-bold">
       Stack i use :
     </span>
-    <div class="grid gap-x-8 gap-y-4 grid-cols-2 mt-6">
+    <div class="pt-6 grid gap-x-8 gap-y-4 grid-cols-3">
       <div class="flex items-center" v-for="(value, index) in stack" :key="index">
         <span class=" mr-3">
           <IconComponent :icon-name="`check`" :icon-width="`15`" :icon-height="`15`" :stroke="`#e19ce7`"
@@ -38,8 +38,8 @@
       </div>
     </div>
   </div>
-  <div class="grid grid-cols-4 gap-3">
-    <div class="col-span-3 social-media break-normal text-lg">
+  <div class="pt-6 grid grid-cols-3 gap-4">
+    <div class="col-span-2 social-media break-normal text-lg">
       <blockquote class="border-l-4 border-secondaryContent italic my-8 pl-8 md:pl-12 text-primaryContent">
         You can say Hi on
         <a class="text-secondaryContent font-bold no-underline hover:underline" target="_blank"
@@ -87,12 +87,9 @@ export default {
 .header>h1 {
   line-height: 3.5rem;
 }
+
 .qr-code {
   display: inherit;
   padding: 8px;
- }
-
-.social-media {
-  margin: 0 auto;
 }
 </style>

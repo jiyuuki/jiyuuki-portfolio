@@ -1,5 +1,5 @@
 <template>
-  <div class="footer pt-10 pb-5">
+  <div class="footer">
     <div class="w-full z-10 top-0">
       <div class="max-w-2xl flex flex-wrap items-center justify-start mt-0">
         <div class="pr-2">
@@ -40,6 +40,7 @@ export default {
   height: 30px;
   left: 0;
   right: 0;
+  margin-top: 40px;
   display: -webkit-box;
 }
 

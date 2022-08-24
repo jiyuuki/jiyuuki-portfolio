@@ -5,7 +5,7 @@
         <div class="flex items-center justify-between">
           <div>
             <router-link :to="{ name: 'HomeView'}">
-              <span class="no-underline hover:no-underline text-xl">
+              <span class="no-underline hover:no-underline text-2xl">
                 Jiyuuki
               </span>
             </router-link>
@@ -29,16 +29,16 @@
         <div class="items-center md:flex">
           <div class="flex flex-col md:flex-row md:mx-6 items-center">
             <router-link v-for="(item, index) in menuItems" :key="index" :to="{ name: item.name }">
-              <span class="my-1 text-sm font-medium md:mx-4 md:my-0">
+              <span class="my-1 text-lg font-medium md:mx-4 md:my-0">
                 {{ item.title }}
               </span>
             </router-link>
-            <a class="text-secondaryContent my-1 text-sm font-medium md:mx-4 md:my-0" target="_blank"
+            <a class="text-secondaryContent my-1 text-lg font-medium md:mx-4 md:my-0" target="_blank"
               href="https://github.com/jiyuuki">
-              <IconComponent :icon-name="`github`" :icon-width="`19`" :icon-height="`19`" />
+              <IconComponent :icon-name="`github`" :icon-width="`21`" :icon-height="`21`" />
             </a>
-            <button class="text-secondaryContent my-1 text-sm font-medium md:mx-4 md:my-0"  @click="changeTheme">
-              <IconComponent :key="count" :icon-name="icon" :icon-width="`19`" :icon-height="`19`" :fill="`stroke`" />
+            <button class="text-secondaryContent my-1 text-lg font-medium md:mx-4 md:my-0"  @click="changeTheme">
+              <IconComponent :key="count" :icon-name="icon" :icon-width="`21`" :icon-height="`21`" :fill="`stroke`" />
             </button>
           </div>
         </div>

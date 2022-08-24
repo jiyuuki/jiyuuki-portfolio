@@ -40,8 +40,8 @@ export default {
 }
 .content {
   padding-bottom: 20px;
-  padding-top: 40px;
-  max-width: 75%;
+  padding-top: 10px;
+  max-width: 83%;
   margin: 0 auto;
 }
 ::-webkit-scrollbar {

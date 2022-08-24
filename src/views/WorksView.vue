@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-10 text-2xl">
+  <div class="pt-10 text-xl">
     <span>
       {{ pageTitle }}
       <a class="text-secondaryContent font-bold" href="https://github.com/jiyuuki" target="_blank">
@@ -13,7 +13,7 @@
         <div class="md:flex md:items-start md:-mx-4">
           <div class="mt-4 md:mx-4 md:mt-0">
             <div class="flex justify-between">
-              <h1 class="text-2xl font-medium capitalize">
+              <h1 class="text-xl font-medium capitalize">
                 {{ work.name }}
               </h1>
               <span class="inline-block rounded-xl md:mx-4">
