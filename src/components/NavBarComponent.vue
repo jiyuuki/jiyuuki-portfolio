@@ -5,7 +5,7 @@
         <div class="flex items-center justify-between">
           <div>
             <router-link :to="{ name: 'HomeView'}">
-              <span class="no-underline hover:no-underline font-medium text-lg">
+              <span class="no-underline hover:no-underline font-medium text-xl mb-5">
                 Jiyuuki
               </span>
             </router-link>
@@ -13,7 +13,9 @@
 
           <!-- Mobile menu button -->
           <div class="flex md:hidden">
-            <button type="button"
+            <button
+              type="button"
+              @click="toggleMenu"
               class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
               aria-label="toggle menu">
               <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
@@ -25,9 +27,8 @@
           </div>
         </div>
 
-        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-        <div class="items-center md:flex">
-          <div class="flex flex-col md:flex-row md:mx-6 items-center">
+        <div class="items-center mt-5 md:flex" :class="toggle">
+          <div class="flex flex-col md:flex-row md:mx-6 items-start">
             <router-link v-for="(item, index) in menuItems" :key="index" :to="{ name: item.name }">
               <span class="my-1 text-lg font-medium md:mx-4 md:my-0">
                 {{ item.title }}
@@ -62,6 +63,8 @@ export default {
   setup () {
     const mainStore = useMainStore()
 
+    const toggle = ref('hidden')
+
     const icon = ref(localStorage.getItem('theme') === 'light' ? 'dark' : 'light')
 
     const changeTheme = () => {
@@ -72,11 +75,17 @@ export default {
       })
     }
 
+    const toggleMenu = () => {
+      toggle.value = toggle.value === 'block' ? 'hidden' : 'block'
+    }
+
     return {
       ...menuItems,
       changeTheme,
       mainStore,
-      icon
+      icon,
+      toggleMenu,
+      toggle
     }
   }
 }
