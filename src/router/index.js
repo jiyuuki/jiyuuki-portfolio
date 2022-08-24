@@ -1,4 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import NotFoundView from '@/views/NotFoundView.vue'
+import NetworkErrorView from '@/views/NetworkErrorView.vue'
+
 import DefaultLayout from '@/views/layouts/DefaultLayout.vue'
 import HomeView from '@/views/HomeView.vue'
 import WorksView from '@/views/WorksView.vue'
@@ -33,12 +36,27 @@ const routes = [
         props: true
       }
     ]
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFoundView',
+    component: NotFoundView
+  },
+  {
+    path: '/network-error',
+    name: 'NetworkError',
+    component: NetworkErrorView
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach(async (to, from, next) => {
+  console.log({ to, from })
+  next()
 })
 
 export default router
