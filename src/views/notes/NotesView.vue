@@ -16,7 +16,9 @@
         {{ note.description }}
       </p>
       <p class="py-6 text-lg font-medium">
-        <code>{{ note.content }}</code>
+        <code-highlight language="javascript">
+          {{ note. content }}
+        </code-highlight>
       </p>
     </div>
   </div>
@@ -25,9 +27,16 @@
 <script>
 import useNoteStore from '@/stores/noteStore'
 import { onMounted, ref } from 'vue'
+import CodeHighlight from 'vue-code-highlight/src/CodeHighlight.vue'
+import 'vue-code-highlight/themes/duotone-sea.css'
+import 'vue-code-highlight/themes/window.css'
 
 export default {
   name: 'NotesView',
+
+  components: {
+    CodeHighlight
+  },
 
   setup () {
     const store = useNoteStore()
