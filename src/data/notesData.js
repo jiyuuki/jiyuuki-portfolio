@@ -7,17 +7,15 @@ export default {
     {
       id: uuidv4(),
       title: 'Nostrum quos voluptas perferendis',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quos voluptas perferendis, alias enim id quas omnis aut dolorem, doloremque cumque? Eum quae cupiditate eius sit...',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quos voluptas perferendis, alias enim id quas omnis aut dolorem, doloremque cumque? Eum quae cupiditate eius sit, ullam cum fugit beatae?',
-      published: 'Marsh 2th 2022',
       joke: 'Did you hear about the mathematician who’s afraid of negative numbers? He’ll stop at nothing to avoid them.'
     },
     {
       id: uuidv4(),
       title: 'Nostrum quos voluptas perferendis',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quos voluptas perferendis, alias enim id quas omnis aut dolorem, doloremque cumque? Eum quae cupiditate eius sit...',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quos voluptas perferendis, alias enim id quas omnis aut dolorem, doloremque cumque? Eum quae cupiditate eius sit, ullam cum fugit beatae?',
-      published: 'Marsh 2th 2022',
       joke: ''
     }
   ]

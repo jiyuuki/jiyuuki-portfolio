@@ -37,7 +37,7 @@ export default {
     {
       id: uuidv4(),
       name: 'NotesView',
-      title: 'Notes'
+      title: 'Open source'
     }
   ]
 }

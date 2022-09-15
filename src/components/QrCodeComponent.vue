@@ -10,7 +10,7 @@
 
 <script>
 import QrcodeVue from 'qrcode.vue'
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
 export default {
   name: 'QrCode',
@@ -35,10 +35,8 @@ export default {
       back: props.theme === 'dark' ? '--darkBackground' : '--lightBackground'
     }
 
-    onMounted(() => {
-      foreground.value = getComputedStyle(document.documentElement).getPropertyValue(QrCodeTheme.fore)
-      background.value = getComputedStyle(document.documentElement).getPropertyValue(QrCodeTheme.back)
-    })
+    foreground.value = getComputedStyle(document.documentElement).getPropertyValue(QrCodeTheme.fore)
+    background.value = getComputedStyle(document.documentElement).getPropertyValue(QrCodeTheme.back)
 
     return {
       foreground,

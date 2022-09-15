@@ -9,18 +9,15 @@
   </div>
   <div class="mx-auto">
     <div class="mt-20" v-for="(note, index) in notes" :key="index">
-      <span class="text-secondaryContent text-2xl">
+      <span class="text-secondaryContent text-xl">
         {{ note.title }}
       </span>
       <p class="text-colorGray text-base">
-        Published on {{ note.published }}
-      </p>
-      <p class="py-6 text-lg font-medium">
         {{ note.description }}
       </p>
-      <span class="text-secondaryContent py-2 rounded-full font-medium">
-        Read More
-      </span>
+      <p class="py-6 text-lg font-medium">
+        <code>{{ note.content }}</code>
+      </p>
     </div>
   </div>
 </template>
