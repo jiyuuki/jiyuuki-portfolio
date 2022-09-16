@@ -8,7 +8,19 @@ export default {
       id: uuidv4(),
       title: 'Nostrum quos voluptas perferendis',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      content: 'let start = "yes"',
+      content: `export default {
+        name: 'VueModel',
+        props: {
+          value: {
+            type: [String, Number],
+            default: null
+          },
+          modelValue: {
+            type: [String, Number],
+            default: null
+          }
+        }
+      }`,
       joke: 'Did you hear about the mathematician who’s afraid of negative numbers? He’ll stop at nothing to avoid them.'
     },
     {
