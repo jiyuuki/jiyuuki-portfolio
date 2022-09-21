@@ -51,6 +51,8 @@ a {
 
   --color-button-surface: #353b41;
   --color-button-content: rgba(255, 255, 255, 0.6);
+
+  --color-bg-notes: #1a1c25;
 }
 
 .light {
@@ -81,6 +83,8 @@ a {
 
   --color-button-surface: #160041;
   --color-button-content: #fffbfe;
+
+  --color-bg-notes: rgba(69, 68, 68, 0.993);
 
 }
 

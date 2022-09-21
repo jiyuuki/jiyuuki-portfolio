@@ -16,9 +16,12 @@
         {{ note.description }}
       </p>
       <p class="py-6 text-lg font-medium">
-        <code-highlight language="javascript">
-          {{ note. content }}
-        </code-highlight>
+        <prism-editor
+          class="my-editor"
+          v-model="note.content"
+          :highlight="highlighter"
+          line-numbers
+        />
       </p>
     </div>
   </div>
@@ -27,15 +30,19 @@
 <script>
 import useNoteStore from '@/stores/noteStore'
 import { onMounted, ref } from 'vue'
-import CodeHighlight from 'vue-code-highlight/src/CodeHighlight.vue'
-import 'vue-code-highlight/themes/duotone-sea.css'
-import 'vue-code-highlight/themes/window.css'
+
+import { PrismEditor } from 'vue-prism-editor'
+import 'vue-prism-editor/dist/prismeditor.min.css'
+import { highlight, languages } from 'prismjs/components/prism-core'
+import 'prismjs/components/prism-clike'
+import 'prismjs/components/prism-javascript'
+import 'prismjs/themes/prism-tomorrow.css'
 
 export default {
   name: 'NotesView',
 
   components: {
-    CodeHighlight
+    PrismEditor
   },
 
   setup () {
@@ -43,6 +50,9 @@ export default {
     const pageTitle = store.pageTitle
     const quotes = store.quotes
     const notes = ref([])
+    const highlighter = (code) => {
+      return highlight(code, languages.js)
+    }
 
     onMounted(() => {
       notes.value = store.getNotes()
@@ -51,7 +61,8 @@ export default {
     return {
       pageTitle,
       quotes,
-      notes
+      notes,
+      highlighter
     }
   }
 }
@@ -60,5 +71,16 @@ export default {
 <style scoped>
 .notes {
   color: var(--color-primary-content);
+}
+.my-editor {
+  background: var(--color-bg-notes);
+  color: #ccc;
+  font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 5px;
+}
+.prism-editor__textarea:focus {
+  outline: none;
 }
 </style>
