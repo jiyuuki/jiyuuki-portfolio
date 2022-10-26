@@ -36,7 +36,7 @@
 </template>
 
 <script>
-
+import { onMounted } from 'vue'
 export default {
   name: 'NoteDetailView',
 
@@ -48,8 +48,10 @@ export default {
     }
   },
 
-  setup () {
-    //
+  setup (props) {
+    onMounted(() => {
+      console.log({ id: props.id })
+    })
   }
 }
 </script>

@@ -6,7 +6,7 @@ import DefaultLayout from '@/views/layouts/DefaultLayout.vue'
 import HomeView from '@/views/HomeView.vue'
 import WorksView from '@/views/WorksView.vue'
 import NotesView from '@/views/notes/NotesView.vue'
-import NoteDetailView from '@/views/notes/NoteDetailView.vue'
+// import NoteDetailView from '@/views/notes/NoteDetailView.vue'
 
 const routes = [
   {
@@ -28,13 +28,13 @@ const routes = [
         path: 'notes',
         name: 'NotesView',
         component: NotesView
-      },
-      {
-        path: '/notes/:id',
-        name: 'NoteDetailView',
-        component: NoteDetailView,
-        props: true
       }
+      // {
+      //   path: '/notes/:id',
+      //   name: 'NoteDetailView',
+      //   component: NoteDetailView,
+      //   props: true
+      // }
     ]
   },
   {
@@ -55,7 +55,6 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to, from, next) => {
-  console.log({ to, from })
   next()
 })
 
