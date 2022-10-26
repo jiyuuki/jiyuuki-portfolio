@@ -9,7 +9,7 @@
   </div>
   <div class="mx-auto">
     <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-3">
-      <div v-for="work in works" :key="work.id" class="project p-6 border rounded-xl">
+      <div v-for="work in works" :key="work.id" class="project p-6 border rounded-lg">
         <div class="md:flex md:items-start md:-mx-4">
           <div class="mt-4 md:mx-4 md:mt-0">
             <div class="flex justify-between">

@@ -53,6 +53,9 @@ a {
   --color-button-content: rgba(255, 255, 255, 0.6);
 
   --color-bg-notes: #1a1c25;
+
+  --color-scrollbar: #282a3778;
+  --bg-scrollbar: #1a1c25;
 }
 
 .light {
@@ -86,6 +89,8 @@ a {
 
   --color-bg-notes: rgba(69, 68, 68, 0.993);
 
+  --color-scrollbar: #686363c4;
+  --bg-scrollbar: #282828;
 }
 
 #app {

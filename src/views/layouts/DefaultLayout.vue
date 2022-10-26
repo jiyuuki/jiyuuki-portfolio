@@ -1,5 +1,5 @@
 <template>
-  <div class="root flex flex-col" :class="mainStore.theme">
+  <div class="root flex justify-center flex-col" :class="mainStore.theme">
     <NavBarComponent />
     <div class="content">
       <router-view />
@@ -42,7 +42,6 @@ export default {
   padding-bottom: 20px;
   padding-top: 10px;
   max-width: 83%;
-  margin: 0 auto;
 }
 ::-webkit-scrollbar {
   width: 5px;

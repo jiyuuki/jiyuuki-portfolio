@@ -7,7 +7,7 @@
       {{ quotes }}
     </p>
   </div>
-  <div class="mx-auto">
+  <div class="flex flex-col mx-auto">
     <div class="mt-20" v-for="(note, index) in notes" :key="index">
       <span class="text-secondaryContent text-xl">
         {{ note.title }}
@@ -72,6 +72,7 @@ export default {
 .notes {
   color: var(--color-primary-content);
 }
+
 .my-editor {
   background: var(--color-bg-notes);
   color: #ccc;
@@ -79,8 +80,10 @@ export default {
   font-size: 14px;
   line-height: 1.5;
   padding: 5px;
-}
-.prism-editor__textarea:focus {
-  outline: none;
+  height: 300px;
+  width: 100%;
+  scrollbar-color: var(--color-scrollbar) var(--bg-scrollbar)  ;
+  scrollbar-width: thin;
+  border: 1px solid var(--color-gray-border);
 }
 </style>

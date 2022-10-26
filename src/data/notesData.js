@@ -6,28 +6,103 @@ export default {
   notes: [
     {
       id: uuidv4(),
-      title: 'Nostrum quos voluptas perferendis',
+      title: 'Vue2 vs Vue3 input forms',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      content: `export default {
-        name: 'VueModel',
-        props: {
-          value: {
-            type: [String, Number],
-            default: null
-          },
-          modelValue: {
-            type: [String, Number],
-            default: null
-          }
-        }
-      }`,
+      content:
+  `<template>
+    <div>
+      // vue2
+      <input
+        type="text"
+        :value="value"
+        @input="$emit(
+          'input',
+          $event.target.value
+        )"
+      >
+      // vue3
+      <input
+        type="text"
+        :value="modelValue"
+        @input="$emit(
+          'update:modelValue',
+          $event.target.value
+        )"
+      >
+    </div>
+    // Call of BaseInput in vue3
+    <BaseInput
+      v-model:modelValue="myInput"
+    />
+  </template>
+  <script>
+  export default {
+    name: 'VueModel',
+    props: {
+      value: {
+        type: [String, Number],
+        default: null
+      },
+      modelValue: {
+        type: [String, Number],
+        default: null
+      }
+    }
+  }
+  </script>`,
       joke: 'Did you hear about the mathematician who’s afraid of negative numbers? He’ll stop at nothing to avoid them.'
     },
     {
       id: uuidv4(),
-      title: 'Nostrum quos voluptas perferendis',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quos voluptas perferendis, alias enim id quas omnis aut dolorem, doloremque cumque? Eum quae cupiditate eius sit, ullam cum fugit beatae?',
+      title: 'Emit',
+      description: 'Emit an event Composition Api',
+      content: `  // child component
+    <template>
+      <input
+      @keyup="getData"
+      >
+    </template>
+    <script>
+    export default {
+      name: 'child',
+      emits: ['search'],
+      setup(props, { emit }) {
+        const getData = () => {
+          // do you...
+          emit('search', 'bla bla bla')
+        }
+        return {
+          getData,
+        }
+      }
+    }
+    </script>
+
+    // parent component
+    <template>
+      <child @search="getBlaBla" />
+    <template/>
+
+    <script>
+    import Child from '...'
+
+    export default {
+      name: 'parent',
+      components: {
+        Child,
+      },
+      
+      setup() {
+        const getBlaBla = (value) => {
+          console.log(value) // output : Bla Bla Bla
+        }
+        
+        return {
+          getBlaBla,
+        }
+      }
+    }
+    <script/>`,
       joke: ''
     }
   ]
