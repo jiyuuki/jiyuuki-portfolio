@@ -6,7 +6,7 @@ export default {
     {
       id: uuidv4(),
       name: 'My portfolio',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'make with ⌛ and a lot of 💛',
       icon: 'space',
       tags: [
         '#javascript',
@@ -16,22 +16,18 @@ export default {
       actions: [
         {
           actionName: 'Source',
-          actionUrl: 'https://github.com/jiyuuki/portfolio'
-        },
-        {
-          actionName: 'Notes',
-          actionUrl: 'http://localhost:8080/'
+          actionUrl: 'https://github.com/jiyuuki/jiyuuki-portfolio'
         },
         {
           actionName: 'Demo',
-          actionUrl: 'http://localhost:8080/'
+          actionUrl: 'https://salmaelhajraoui.dev/'
         }
       ]
     },
     {
       id: uuidv4(),
       name: 'My Github universe',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Search and find your github universe',
       icon: 'space',
       tags: [
         '#javascript',
@@ -42,17 +38,13 @@ export default {
         {
           actionName: 'Source',
           actionUrl: 'https://github.com/jiyuuki/my-github-universe'
-        },
-        {
-          actionName: 'Notes',
-          actionUrl: 'https://github.com/jiyuuki/my-github-universe/blob/main/README.md'
         }
       ]
     },
     {
       id: uuidv4(),
       name: 'Vue forms UI npm package',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Package to create and handle forms element',
       icon: 'space',
       tags: [
         '#javascript',
@@ -62,17 +54,13 @@ export default {
         {
           actionName: 'Source',
           actionUrl: 'https://github.com/jiyuuki/vue-forms-ui'
-        },
-        {
-          actionName: 'Notes',
-          actionUrl: '#'
         }
       ]
     },
     {
       id: uuidv4(),
       name: 'Vue tran npm package',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Package to handle translation by adding a vue js directive',
       icon: 'space',
       tags: [
         '#javascript',
@@ -82,17 +70,13 @@ export default {
         {
           actionName: 'Source',
           actionUrl: 'https://github.com/jiyuuki/vue-tran'
-        },
-        {
-          actionName: 'Notes',
-          actionUrl: '#'
         }
       ]
     },
     {
       id: uuidv4(),
-      name: 'Copy & Paste Components',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      name: 'Workspace',
+      description: 'Space to create and manage lists and tasks',
       icon: 'space',
       tags: [
         '#javascript',
@@ -101,38 +85,31 @@ export default {
       actions: [
         {
           actionName: 'Source',
-          actionUrl: '#'
-        },
-        {
-          actionName: 'Notes',
-          actionUrl: '#'
+          actionUrl: 'https://github.com/jiyuuki/workspace'
         }
       ]
     },
     {
       id: uuidv4(),
       name: 'Object detection',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'AI to detect objects',
       icon: 'space',
       tags: [
         '#javascript',
-        '#reactjs'
+        '#reactjs',
+        '#TensorFlow'
       ],
       actions: [
         {
           actionName: 'Source',
           actionUrl: 'https://github.com/jiyuuki/object-detection'
-        },
-        {
-          actionName: 'Notes',
-          actionUrl: 'https://github.com/jiyuuki/object-detection/blob/main/README.md'
         }
       ]
     },
     {
       id: uuidv4(),
       name: 'Monsters rolodex',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Random and find monsters game',
       icon: 'space',
       tags: [
         '#javascript',
@@ -142,17 +119,13 @@ export default {
         {
           actionName: 'Source',
           actionUrl: 'https://github.com/jiyuuki/reactjs-monsters-rolodex'
-        },
-        {
-          actionName: 'Notes',
-          actionUrl: 'https://github.com/jiyuuki/reactjs-monsters-rolodex/blob/main/README.md'
         }
       ]
     },
     {
       id: uuidv4(),
       name: 'ping pong',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Ping pong game',
       icon: 'space',
       tags: [
         '#javascript'
@@ -161,17 +134,13 @@ export default {
         {
           actionName: 'Source',
           actionUrl: 'https://github.com/jiyuuki/ping-pong'
-        },
-        {
-          actionName: 'Notes',
-          actionUrl: 'https://github.com/jiyuuki/ping-pong/blob/master/README.md'
         }
       ]
     },
     {
       id: uuidv4(),
       name: 'eat me',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Snake game',
       icon: 'space',
       tags: [
         '#javascript'
@@ -179,11 +148,7 @@ export default {
       actions: [
         {
           actionName: 'Source',
-          actionUrl: 'https://github.com/jiyuuki/eat-me/tree/develop'
-        },
-        {
-          actionName: 'Notes',
-          actionUrl: 'https://github.com/jiyuuki/eat-me/blob/develop/README.md'
+          actionUrl: 'https://github.com/jiyuuki/eat-me'
         }
       ]
     }

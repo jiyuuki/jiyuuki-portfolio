@@ -11,12 +11,11 @@
       </span>
     </p>
     <p class="py-6 text-primaryContent break-normal text-lg">
-      Hallo to lorem Pariatur
+      I love
       <span class="text-secondaryContent no-underline hover:underline">
-        proident occaecat
+        build, code and occasionally designe
       </span>
-      proident occaecat consectetur eu ipsum duis deserunt esse aliqua veniam do officia enim
-      deserunt.
+      solid, scalable and beautiful product for the web
     </p>
   </div>
   <div class="py-6 text-primaryContent break-normal text-lg">

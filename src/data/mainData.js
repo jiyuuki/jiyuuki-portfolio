@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid'
 
 export default {
-  aboutMe: 'Sills tempor qui labore minim velit exercitation incididunt occaecat dolore. Veniam tempor do deserunt voluptate aliquip sit. Commodo ipsum nisi deserunt adipisicing sit mollit dolor eu irure sunt est officia labore',
+  aboutMe: 'Highly skilled at Javascript ecosysteme and design systems with experience building products for may client, today i can help you create your product on the web',
   stack: [
     {
       id: uuidv4(),

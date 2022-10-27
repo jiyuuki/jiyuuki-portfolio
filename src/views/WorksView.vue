@@ -13,12 +13,10 @@
         <div class="md:flex md:items-start md:-mx-4">
           <div class="mt-4 md:mx-4 md:mt-0">
             <div class="flex justify-between">
-              <h1 class="text-xl font-medium capitalize">
+              <h1 class="text-xl font-medium capitalize display-block-ruby">
                 {{ work.name }}
-              </h1>
-              <span class="inline-block rounded-xl md:mx-4">
                 <IconComponent :icon-name="`space`" :stroke="`var(--color-icon)`" />
-              </span>
+              </h1>
             </div>
             <div class="call-action mt-5 mb-5">
               <a v-for="({ actionName, actionUrl}, index) in work.actions" :key="index" :href="actionUrl"

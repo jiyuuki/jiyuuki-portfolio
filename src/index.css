@@ -120,3 +120,7 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.display-block-ruby {
+  display: block ruby;
+}

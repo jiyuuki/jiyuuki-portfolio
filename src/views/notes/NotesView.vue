@@ -12,10 +12,10 @@
       <span class="text-secondaryContent text-xl">
         {{ note.title }}
       </span>
-      <p class="text-colorGray text-base">
-        {{ note.description }}
+      <p class="text-colorGray text-base py-2">
+        {{ note.joke }}
       </p>
-      <p class="py-6 text-lg font-medium">
+      <p class="text-lg font-medium">
         <prism-editor
           class="my-editor"
           v-model="note.content"
