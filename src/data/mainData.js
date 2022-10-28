@@ -17,6 +17,10 @@ export default {
     },
     {
       id: uuidv4(),
+      tag: 'Vuex'
+    },
+    {
+      id: uuidv4(),
       tag: 'Nuxtjs'
     },
     {
