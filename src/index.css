@@ -121,6 +121,6 @@ a {
   background: #555;
 }
 
-.display-block-ruby {
-  display: block ruby;
+.display-block {
+  display: flex;
 }

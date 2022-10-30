@@ -13,9 +13,9 @@
         <div class="md:flex md:items-start md:-mx-4">
           <div class="mt-4 md:mx-4 md:mt-0">
             <div class="flex justify-between">
-              <h1 class="text-xl font-medium capitalize display-block-ruby">
+              <h1 class="text-xl font-medium capitalize display-block">
                 {{ work.name }}
-                <IconComponent :icon-name="`space`" :stroke="`var(--color-icon)`" />
+                <IconComponent class="ml-5" :icon-name="`space`" :stroke="`var(--color-icon)`" />
               </h1>
             </div>
             <div class="call-action mt-5 mb-5">
