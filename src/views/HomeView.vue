@@ -7,7 +7,7 @@
     </h1>
     <p class="pb-6 text-sm md:text-base text-gray-600 text-primaryContent">
       <span class="break-normal text-2xl">
-        Front-end Developer
+        Senior Software Engineer - Front End
       </span>
     </p>
     <p class="py-6 text-primaryContent break-normal text-lg">
