@@ -6,7 +6,7 @@
           <div>
             <router-link :to="{ name: 'HomeView'}">
               <span class="no-underline hover:no-underline font-semibold text-xl mb-5">
-                Jiyuuki
+                S | E
               </span>
             </router-link>
           </div>
