@@ -1,5 +1,7 @@
 # jiyuuki-portfolio
 
+https://github.com/jiyuuki/jiyuuki-portfolio.git
+
 ## Project setup
 ```
 npm install
