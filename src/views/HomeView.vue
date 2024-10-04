@@ -6,57 +6,22 @@
       I'm <span class="text-secondaryContent">SALMA EL HAJRAOUI</span>
     </h1>
     <p class="pb-6 text-sm md:text-base text-gray-600 text-primaryContent">
-      <span class="break-normal text-2xl">
-        Senior Software Engineer - Front End
+      <span class="break-normal text-xl">
+        Frontend Tech Lead | Senior Frontend Developer | Open to Tech Leadership & Freelance Roles
       </span>
     </p>
-    <p class="py-6 text-primaryContent break-normal text-lg">
-      I love
-      <span class="text-secondaryContent no-underline hover:underline">
-        build, code and occasionally designe
-      </span>
-      solid, scalable and beautiful product for the web
+    <p class="text-primaryContent break-normal text-lg">
+      With over nine years of experience in front-end development, I specialize in crafting dynamic, scalable, and visually stunning web products.
     </p>
   </div>
   <div class="py-6 text-primaryContent break-normal text-lg">
-    {{ aboutMe }}
+    I specialize in creating dynamic, scalable, and visually stunning web products. With a deep understanding of the JavaScript ecosystem and design systems, I transform ideas into seamless digital experiences. Over the years, I’ve helped clients bring their vision to life, building high-performance applications with a focus on usability, aesthetics, and functionality.
   </div>
-  <div class="py-6 text-primaryContent break-normal text-lg">
-    <span class="text-secondaryContent break-normal text-xl font-bold">
-      Stack i use :
-    </span>
-    <div class="pt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-      <div class="flex items-center" v-for="(value, index) in stack" :key="index">
-        <span class=" mr-3">
-          <IconComponent :icon-name="`check`" :icon-width="`15`" :icon-height="`15`" :stroke="`#e19ce7`"
-            :fill="`#e19ce7`" />
-        </span>
-        <span>
-          {{ value.tag }}
-        </span>
-      </div>
-    </div>
-  </div>
-  <div class="pt-6 grid grid-cols-3 gap-4 items-center">
-    <div class="col-span-2 social-media break-normal text-lg">
-      <blockquote class="border-l-4 border-secondaryContent italic my-8 pl-8 md:pl-12 text-primaryContent">
-        You can say Hi on
-        <a class="text-secondaryContent font-bold no-underline hover:underline" target="_blank"
-          href="https://twitter.com/SalmaElHajraoui">Twitter</a>
-        or
-        <a class="text-secondaryContent font-bold no-underline hover:underline" target="_blank"
-          href="https://www.linkedin.com/in/elhajraoui">Linkdin</a>
-        or scan this QR code to download my resume
-      </blockquote>
-    </div>
-    <div>
-      <span class="qr-code">
-        <QrCodeComponentVue
-          :key="theme"
-          :theme="theme"
-        />
-      </span>
-    </div>
+  
+  <div class="pt-6 h-30">
+    <a href="https://www.linkedin.com/in/elhajraoui/" target="_blank" class="bg-pink-600 text-white py-2 px-4 rounded inline-flex items-center space-x-2 h-30 hover:bg-pink-700">
+      <span>Let’s build something exceptional together!</span>
+    </a>
   </div>
 </template>
 

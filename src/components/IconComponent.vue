@@ -5,6 +5,7 @@
     :height="iconHeight"
     :fill="fill"
     :stroke="stroke"
+    :color="icon-color"
   >
     <use
       :xlink:href=" '#' + icon.id"
@@ -36,6 +37,10 @@ export default {
       default: 'none'
     },
     stroke: {
+      type: String,
+      default: 'none'
+    },
+    iconColor: {
       type: String,
       default: 'none'
     }

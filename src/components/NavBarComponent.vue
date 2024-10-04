@@ -5,7 +5,7 @@
         <div class="flex items-center justify-between">
           <div>
             <router-link :to="{ name: 'HomeView'}">
-              <span class="no-underline hover:no-underline font-medium text-xl mb-5">
+              <span class="no-underline hover:no-underline font-semibold text-xl mb-5">
                 Jiyuuki
               </span>
             </router-link>
@@ -27,22 +27,33 @@
           </div>
         </div>
 
-        <div class="items-center mt-5 md:flex" :class="toggle">
-          <div class="flex flex-col md:flex-row md:mx-6 items-start">
-            <router-link v-for="(item, index) in menuItems" :key="index" :to="{ name: item.name }">
-              <span class="my-1 text-lg font-medium md:mx-4 md:my-0">
-                {{ item.title }}
-              </span>
-            </router-link>
-            <a class="text-secondaryContent my-1 text-lg font-medium md:mx-4 md:my-0" target="_blank"
-              href="https://github.com/jiyuuki">
-              <IconComponent :icon-name="`github`" :icon-width="`21`" :icon-height="`21`" />
-            </a>
-            <button class="text-secondaryContent my-1 text-lg font-medium md:mx-4 md:my-0"  @click="changeTheme">
-              <IconComponent :key="icon" :icon-name="icon" :icon-width="`21`" :icon-height="`21`" :fill="`stroke`" />
-            </button>
-          </div>
-        </div>
+       <div class="items-center mt-5 md:flex" :class="toggle">
+  <div class="flex flex-col md:flex-row md:mx-6 items-center"> <!-- Changed items-start to items-center for vertical alignment -->
+    <router-link v-for="(item, index) in menuItems" :key="index" :to="{ name: item.name }">
+      <span class="my-1 text-lg font-medium md:mx-4 md:my-0">
+        {{ item.title }}
+      </span>
+    </router-link>
+
+    <!-- GitHub Link -->
+    <a class="text-secondaryContent my-1 text-lg font-medium md:mx-4 md:my-0" target="_blank"
+      href="https://github.com/jiyuuki">
+      <IconComponent :icon-name="`github`" :icon-width="`21`" :icon-height="`21`" />
+    </a>
+
+    <!-- Theme Change Button with Colored Icon -->
+    <a class="text-secondaryContent my-1 text-lg font-medium md:mx-4 md:my-0" @click="changeTheme">
+      <IconComponent 
+        :key="icon" 
+        :icon-name="icon" 
+        :icon-width="`30`" 
+        :icon-height="`30`" 
+        :icon-color="isDarkTheme ? '#FFD700' : '#1E90FF'"
+      />
+    </a>
+  </div>
+</div>
+
       </div>
     </nav>
   </div>
