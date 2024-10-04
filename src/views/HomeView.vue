@@ -19,7 +19,7 @@
   </div>
   
   <div class="pt-6 h-30">
-    <a href="https://www.linkedin.com/in/elhajraoui/" target="_blank" class="bg-pink-600 text-white py-2 px-4 rounded inline-flex items-center space-x-2 h-30 hover:bg-pink-700">
+    <a href="https://www.linkedin.com/in/elhajraoui/" target="_blank" class="bg-secondaryContent text-white py-2 px-4 rounded inline-flex items-center space-x-2 h-30 hover:bg-secondaryContent-700">
       <span>Let’s build something exceptional together!</span>
     </a>
   </div>

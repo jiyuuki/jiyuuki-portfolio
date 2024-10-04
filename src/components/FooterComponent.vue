@@ -3,7 +3,7 @@
     <div class="w-full z-10 top-0">
       <div class="max-w-2xl flex flex-wrap items-center justify-start mt-0">
         <div class="text-sm">
-          Make with ⌛ and a lot of 🩷🩷🩷
+          Make with ⌛ and a lot of 💚
         </div>
       </div>
     </div>

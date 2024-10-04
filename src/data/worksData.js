@@ -6,7 +6,7 @@ export default {
     {
       id: uuidv4(),
       name: 'My portfolio',
-      description: 'make with ⌛ and a lot of 💛',
+      description: 'make with ⌛ and a lot of 💚',
       icon: 'space',
       tags: [
         '#javascript',
