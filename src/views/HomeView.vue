@@ -11,11 +11,11 @@
       </span>
     </p>
     <p class="text-primaryContent break-normal text-lg">
-      With over nine years of experience in front-end development, I specialize in crafting dynamic, scalable, and visually stunning web products.
+      With over nine years of experience in front-end development, I excel at creating dynamic, scalable, and visually compelling web applications.
     </p>
   </div>
   <div class="py-6 text-primaryContent break-normal text-lg">
-    I specialize in creating dynamic, scalable, and visually stunning web products. With a deep understanding of the JavaScript ecosystem and design systems, I transform ideas into seamless digital experiences. Over the years, I’ve helped clients bring their vision to life, building high-performance applications with a focus on usability, aesthetics, and functionality.
+    My expertise lies in the JavaScript ecosystem and modern design systems, enabling me to transform complex ideas into seamless digital experiences. Whether it's building high-performance web products or delivering user-centric solutions, I focus on combining functionality with exceptional aesthetics. I’ve had the privilege of collaborating with diverse clients, helping them bring their visions to life through intuitive, scalable, and high-performing applications tailored for long-term success.
   </div>
   
   <div class="pt-6 h-30">
