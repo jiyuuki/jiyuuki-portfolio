@@ -39,7 +39,6 @@ export default {
   color: var(--color-primary-content)
 }
 .content {
-  padding-bottom: 20px;
   padding-top: 10px;
   max-width: 85%;
   margin: auto;

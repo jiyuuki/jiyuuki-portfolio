@@ -12,7 +12,7 @@
       <span class="text-secondaryContent text-xl">
         {{ note.title }}
       </span>
-      <p class="text-colorGray text-base py-2">
+      <p class="text-base py-2">
         {{ note.joke }}
       </p>
       <p class="text-lg font-medium">
